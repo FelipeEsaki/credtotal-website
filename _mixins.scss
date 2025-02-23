@@ -1,0 +1,533 @@
+$cor-primaria: #ECB833;
+$cor-secundaria: #00939A;
+$cor-branco: #fff;
+$cor-preto: #000;
+$cor-cinza: #a7a7a7;
+
+
+
+// header
+@mixin header {
+    background-color: $cor-secundaria;
+    height: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    .info {
+        padding: 10px;
+        display: flex;
+        justify-content: space-around;
+        color: $cor-preto;
+        background-color: $cor-branco;
+
+        .informacoes {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 400;
+
+            i {
+                color: $cor-primaria;
+            }
+        }
+    }
+
+    .header__all {
+        margin: 0 auto;
+        max-width: 1200px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-first {
+            margin: 20px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .menu {
+                display: flex;
+                align-items: center;
+            }
+
+            #menu-icon {
+                display: none;
+            }
+
+            #logo {
+                width: 250px;
+            }
+
+            #logomb {
+                display: none;
+            }
+
+            .header__all-second {
+                display: flex;
+                justify-content: center;
+                padding: 30px 0;
+                border-radius: 20px;
+
+                ul {
+                    text-transform: uppercase;
+                    width: 100%;
+                    padding: 0;
+                    display: flex;
+                    list-style: none;
+                    justify-content: center;
+                    gap: 30px;
+
+
+                    li {
+                        text-align: center;
+
+                        a {
+                            padding: 5px;
+                            text-decoration: none;
+                            color: $cor-branco;
+                            font-size: .9rem;
+                            font-weight: 600;
+                            transition: .5s;
+                        }
+
+                        a:hover {
+                            color: $cor-primaria;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .menu__bar {
+        display: none;
+    }
+}
+
+
+
+// header mobile
+@mixin header-520 {
+    height: 180px;
+    position: relative;
+
+    .info {
+        display: none;
+        padding: 0px;
+        display: flex;
+        justify-content: space-around;
+        color: $cor-preto;
+        background-color: $cor-branco;
+
+        .informacoes {
+            display: none;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+
+            i {
+                color: $cor-primaria;
+            }
+        }
+    }
+
+    .header__all {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &-first {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+
+            #logo {
+                width: 250px;
+                display: none;
+            }
+
+            #logomb {
+                display: block;
+                width: 200px;
+            }
+
+            .menu {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+
+            #menu-icon {
+                color: $cor-branco;
+                font-size: 1.5rem;
+                display: inline;
+            }
+        }
+
+        .header__all-second {
+            display: none;
+
+            ul {
+                display: none;
+
+                li {
+                    display: none;
+
+                    a {
+                        display: none;
+                        padding: 5px;
+                        border-radius: 10px;
+                        text-decoration: none;
+                        color: $cor-branco;
+                        font-size: 1rem;
+                        font-weight: 600;
+                        transition: .5s;
+                    }
+
+                    a:hover {
+                        color: $cor-secundaria;
+                        background-color: $cor-branco;
+                    }
+                }
+            }
+        }
+    }
+
+    .menu__bar {
+        background-color: $cor-secundaria;
+        position: absolute;
+        top: -500%;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        z-index: 999;
+
+        .menu__bar-content {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            align-items: center;
+
+            a {
+                text-decoration: none;
+                color: $cor-branco;
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+
+            i {
+                font-size: 1.5rem;
+                color: $cor-primaria;
+            }
+        }
+    }
+}
+
+
+
+
+// footer
+@mixin footer {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $cor-secundaria;
+    color: $cor-branco;
+
+    .footer__content {
+        max-width: 1400px;
+        padding: 50px 50px;
+        gap: 20px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footer__logo {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            img {
+                width: 60%;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+                color: $cor-branco;
+                font-weight: 400;
+            }
+
+            .icons {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                a {
+                    color: $cor-primaria;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $cor-branco;
+                    }
+
+                    i {
+                        font-size: 1.5rem;
+                        color: $cor-primaria;
+                        transition: .5s;
+                    }
+                }
+            }
+
+        }
+
+        .footer__itens {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: $cor-branco;
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                li a {
+                    text-decoration: none;
+                    color: $cor-branco;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $cor-primaria;
+                    }
+                }
+            }
+        }
+
+        .footer__contato {
+            ul li {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                i {
+                    @include i-default;
+                    color: $cor-branco;
+                }
+            }
+        }
+    }
+
+    .copy {
+        text-align: center;
+    }
+}
+
+
+
+// footer-mobile
+@mixin footer-mobile {
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $cor-secundaria;
+    color: $cor-branco;
+
+    .footer__content {
+        max-width: 100%;
+        padding: 50px 50px;
+        gap: 40px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        .footer__logo {
+            width: 100%;
+
+            img {
+                width: 50%;
+                margin-bottom: 20px;
+            }
+
+            p {
+                margin-bottom: 20px;
+                @include p-mobile;
+            }
+
+            .icons {
+                display: flex;
+                align-items: center;
+
+                a {
+                    color: $cor-primaria;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $cor-branco;
+                    }
+
+                    i {
+                        font-size: 1.5rem;
+                        margin: 0 10px;
+                        color: $cor-primaria;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+
+        .footer__itens {
+            display: flex;
+            flex-direction: column;
+
+            span {
+                color: $cor-branco;
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                li a {
+                    text-decoration: none;
+                    color: $cor-branco;
+                    transition: .5s;
+
+                    &:hover {
+                        color: $cor-primaria;
+                    }
+                }
+            }
+        }
+
+        .footer__contato {
+            ul li {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+
+                i {
+                    @include i-default;
+                    color: $cor-branco;
+                }
+            }
+        }
+    }
+
+    .copy {
+        width: 90%;
+        font-size: .8rem;
+        text-align: center;
+    }
+}
+
+
+
+// mixins default
+@mixin h2-default {
+    font-size: 2rem;
+    color: $cor-secundaria;
+    font-weight: 800;
+}
+
+@mixin h3-default {
+    color: $cor-secundaria;
+    font-size: 1.5rem;
+}
+
+@mixin p-default {
+    font-size: 1.2rem;
+    color: $cor-branco;
+    font-weight: 400;
+}
+
+@mixin a-default ($bgcolor, $textcolor, $width) {
+    width: $width;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: .5s;
+}
+
+@mixin i-default {
+    color: $cor-primaria;
+    font-size: 1.4rem;
+}
+
+
+// mixins mobile
+@mixin h2-mobile {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $cor-secundaria;
+}
+
+@mixin h3-mobile {
+    color: $cor-secundaria;
+    font-size: 1.5rem;
+}
+
+@mixin p-mobile {
+    font-size: .8rem;
+    font-weight: 400;
+    color: $cor-branco;
+}
+
+@mixin a-mobile ($bgcolor, $textcolor, $width) {
+    width: $width;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: $bgcolor;
+    color: $textcolor;
+    font-size: .8rem;
+    font-weight: 500;
+    transition: .5s;
+}
+
+@mixin i-mobile {
+    color: $cor-primaria;
+    font-size: 1.4rem;
+}

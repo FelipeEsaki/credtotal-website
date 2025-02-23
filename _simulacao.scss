@@ -1,0 +1,221 @@
+.main__simulacao {
+    padding-bottom: 100px;
+
+    .form {
+        max-width: 500px;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+        background-color: $cor-primaria;
+        background-size: cover;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 40px;
+        border-radius: 20px;
+        gap: 20px;
+
+        .itens {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            button {
+                border-radius: 20px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.12);
+                border-bottom: 1px solid rgba(200, 200, 200, .4);
+                border-right: 1px solid rgba(200, 200, 200, .4);
+                border-top: 1px solid #5a5a5a;
+                border-left: 1px solid #5a5a5a;
+                color: $cor-branco;
+                font-weight: 500;
+                font-size: 1rem;
+                cursor: pointer;
+            }
+
+            label {
+                font-size: 1.5rem;
+                font-weight: 500;
+                color: $cor-branco;
+            }
+
+            input {
+                border-radius: 20px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.12);
+                border-bottom: 1px solid rgba(200, 200, 200, .4);
+                border-right: 1px solid rgba(200, 200, 200, .4);
+                border-top: 1px solid #5a5a5a;
+                border-left: 1px solid #5a5a5a;
+                color: $cor-branco;
+                font-size: 1rem;
+                font-weight: 400;
+
+                &::placeholder {
+                    color: $cor-branco;
+                }
+            }
+
+            textarea {
+                resize: none;
+                border-radius: 20px;
+                padding: 10px;
+                background: rgba(0, 0, 0, 0.12);
+                border-bottom: 1px solid rgba(200, 200, 200, .4);
+                border-right: 1px solid rgba(200, 200, 200, .4);
+                border-top: 1px solid #5a5a5a;
+                border-left: 1px solid #5a5a5a;
+                color: $cor-branco;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+        .servicos {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+            background-color: $cor-branco;
+            border-radius: 20px;
+            padding: 10px;
+
+            button {
+                padding: 5px;
+                background-color: $cor-branco;
+                border: 0;
+                font-size: 1rem;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $cor-primaria;
+                    color: $cor-branco;
+                }
+            }
+        }
+
+        .btn-enviar {
+            @include a-default($cor-branco, $cor-primaria, 100%);
+            font-weight: 600;
+            cursor: pointer;
+            border: 0;
+
+            &:hover {
+                background-color: $cor-secundaria;
+                color: $cor-branco;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .main__simulacao {
+        background-image: url(assets/pattern.png);
+        background-size: cover;
+        padding-bottom: 100px;
+
+        .form {
+            max-width: 80%;
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            background-color: $cor-primaria;
+            padding: 40px;
+            border-radius: 20px;
+            gap: 20px;
+
+            .itens {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+
+                button {
+                    border-radius: 20px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.12);
+                    border-bottom: 1px solid rgba(200, 200, 200, .4);
+                    border-right: 1px solid rgba(200, 200, 200, .4);
+                    border-top: 1px solid #5a5a5a;
+                    border-left: 1px solid #5a5a5a;
+                    color: $cor-branco;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+
+                label {
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: $cor-branco;
+                }
+
+                input {
+                    border-radius: 20px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.12);
+                    border-bottom: 1px solid rgba(200, 200, 200, .4);
+                    border-right: 1px solid rgba(200, 200, 200, .4);
+                    border-top: 1px solid #5a5a5a;
+                    border-left: 1px solid #5a5a5a;
+                    color: $cor-branco;
+                    font-size: .8rem;
+                    font-weight: 400;
+
+                    &::placeholder {
+                        color: $cor-branco;
+                    }
+                }
+
+                textarea {
+                    resize: none;
+                    height: 100px;
+                    border-radius: 20px;
+                    padding: 10px;
+                    background: rgba(0, 0, 0, 0.12);
+                    border-bottom: 1px solid rgba(200, 200, 200, .4);
+                    border-right: 1px solid rgba(200, 200, 200, .4);
+                    border-top: 1px solid #5a5a5a;
+                    border-left: 1px solid #5a5a5a;
+                    color: $cor-branco;
+                    font-size: .8rem;
+                    font-weight: 400;
+                }
+            }
+
+            .servicos {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: $cor-branco;
+                border-radius: 20px;
+                padding: 10px;
+
+                button {
+                    padding: 5px;
+                    background-color: $cor-branco;
+                    border: 0;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $cor-primaria;
+                        color: $cor-branco;
+                    }
+                }
+            }
+
+            .btn-enviar {
+                @include a-default($cor-branco, $cor-primaria, 100%);
+                font-weight: 600;
+                cursor: pointer;
+                border: 0;
+
+                &:hover {
+                    background-color: $cor-secundaria;
+                    color: $cor-branco;
+                }
+            }
+        }
+    }
+}

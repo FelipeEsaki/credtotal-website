@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="assets/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>CredTotal - Simulação</title>
+</head>
+
+<body>
+    <header class="header header__home">
+        <div class="info">
+            <div class="informacoes telefone">
+                <i class="fa-solid fa-phone"></i>
+                <div class="info-content">
+                    <span> (31) 98885 - 2630
+                    </span>
+                </div>
+            </div>
+            <div class="informacoes endereco">
+                <i class="fa-solid fa-location-dot"></i>
+                <div class="info-content">
+                    <span>Belo Horizonte - MG</span>
+                </div>
+            </div>
+            <div class="informacoes horario">
+                <i class="fa-solid fa-clock"></i>
+                <div class=info-content>
+                    <span>Seg - Sex: 08:00 - 18:00</span>
+                </div>
+            </div>
+        </div>
+        <section class="header__all">
+            <div class="header__all-first">
+                <div class="menu">
+                    <img class="banner" id="logo" src="assets/logo C H.png" alt="Logo CredTotal">
+                    <img id="logomb" src="assets/logo branco H.png" alt="Logo CredTotal">
+                    <i id="menu-icon" class="fa-solid fa-bars"></i>
+                </div>
+                <div class="header__all-second">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="sobreNos.html">Quem somos</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="simulacao.html">Simulação</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu__bar" id="menu__bar">
+                <ul class="menu__bar-content">
+                    <i class="fa-solid fa-x" id="close-btn"></i>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreNos.html">Quem somos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="simulacao.html">Simulação</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+    <main class="main__simulacao">
+        <section class="form">
+            <div class="itens">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+            </div>
+
+            <div class="itens">
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" placeholder="Digite seu melhor Email" required>
+            </div>
+
+            <div class="itens">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="tel" name="telefone" placeholder="Digite seu telefone" required>
+            </div>
+
+            <div class="itens">
+                <label for="servico">Selecione o serviço</label>
+                <button id="btn-selecionar">Selecionar</button>
+            </div>
+
+            <div class="servicos" id="servicos">
+                <button class="botao-servicos" value="consignado">Crédito Consignado</button>
+                <button class="botao-servicos" value="consignado">Saque FGTS</button>
+                <button class="botao-servicos" value="pessoal">Crédito Pessoal</button>
+                <button class="botao-servicos" value="rural">Crédito Rural</button>
+                <button class="botao-servicos" value="limpaNome">Limpa nome</button>
+                <button class="botao-servicos" value="seguro">Seguros</button>
+                <button class="botao-servicos" value="consorcio">Consórcios</button>
+                <button class="botao-servicos" value="solar">Energia solar</button>
+                <button class="botao-servicos" value="giro">Capital de giro</button>
+                <button class="botao-servicos" value="veiculo">Financiamento veicular</button>
+                <button class="botao-servicos" value="reveicular">Refinanciamento veicular</button>
+                <button class="botao-servicos" value="residencia">Financiamento residencial</button>
+                <button class="botao-servicos" value="reresidencia">Refinanciamento residencial</button>
+                <button class="botao-servicos" value="reresidencia">Tele medicina</button>
+                <button class="botao-servicos" value="reresidencia">Carta fiança</button>
+                <button class="botao-servicos" value="reresidencia">Consultoria tributária</button>
+            </div>
+
+            <div class="itens">
+                <label for="valor">Digite o valor que precisa</label>
+                <input id="valor" value="R$" type="tel" name="valor">
+            </div>
+
+            <div class="itens">
+                <label for="texto">Observações</label>
+                <textarea name="texto" id="texto" cols="30" rows="10"></textarea>
+            </div>
+
+            <input id="enviar" class="btn-enviar" type="submit" name="enviar" placeholder="Enviar">
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <img src="assets/logo C H.png" alt="Logo CredTotal">
+                <p>A CredTotal é uma empresa que engloba uma ampla variedade de serviços financeiros, incluindo
+                    linhas de crédito, financiamentos, consórcios e seguros.
+                    <br><br>
+                </p>
+                <div class="icons">
+                    <a target="_blank" href="?"><i
+                            class="fa-brands fa-instagram"></i></a>
+                            <a target="_blank" href="?"><i
+                             ></i>Instagram</a>
+                    <!-- <a target="_blank" href="?"><i class="fa-brands fa-facebook"></i></a> -->
+                </div>
+            </div>
+            <div class="footer__menu footer__itens">
+                <span>Menu</span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobreNos.html">Quem somos</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="simulacao.html">Simulação</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div class="footer__servicos footer__itens">
+                <span>Serviços</span>
+                <ul>
+                    <li><a href="simulacao.html">Crédito Consignado</a></li>
+                    <li><a href="simulacao.html">Capital de Giro</a></li>
+                    <li><a href="simulacao.html">Financiamentos</a></li>
+                    <li><a href="simulacao.html">Consórcios</a></li>
+                    <li><a href="simulacao.html">Crédito Pessoal</a></li>
+                </ul>
+            </div>
+            <div class="footer__contato footer__itens">
+                <span>Contato</span>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <p>Telefone</p>
+                            <span>(31) 98885 - 2630
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <p>Endereço</p>
+                            <span>Belo Horizonte - MG</span>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <p>Horário de atendimento</p>
+                            <span>Seg - Sex: 08:00 - 18:00</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <span class="copy"> &copy; Copyright 2025 Direitos Reservados. Proibido cópia total ou parcial do nosso
+            conteúdo.
+            Desenvolvido por Esaki Desenvolvimentos.</span>
+            <!-- <a target="_blank" href="pprivacidade.html" style="color: white;">Política de privacidade</a> -->
+    </footer>
+
+
+
+
+    <script src="menuBar.js"></script>
+    <script src="simulacao.js"></script>
+</body>
+
+</html>

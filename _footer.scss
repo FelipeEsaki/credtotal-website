@@ -1,0 +1,10 @@
+#footer {
+    @include footer;
+}
+
+
+@media (max-width: 768px) {
+    #footer {
+        @include footer-mobile;
+    }
+}
