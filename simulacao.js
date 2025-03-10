@@ -1,18 +1,9 @@
 const btnSelecionar = document.getElementById('btn-selecionar');
 const servicos = document.getElementById('servicos');
 const btnServicos = document.querySelectorAll('.botao-servicos');
-const btnEnviar = document.getElementById('enviar');
+const form = document.querySelector('.form');
 
-
-let numeroWpp = '5531988852630';
-
-let nome = document.querySelector('#nome');
-let email = document.querySelector('#email');
-let telefone = document.querySelector('#telefone');
-let valor = document.querySelector('#valor');
-let obs = document.querySelector('#texto');
-
-const ada = nome.value;
+const numeroWpp = '5531988852630';
 
 btnSelecionar.addEventListener('click', () => {
     servicos.style.display = 'flex';
@@ -23,15 +14,25 @@ btnServicos.forEach(botao => {
     botao.addEventListener('click', () => {
         btnSelecionar.textContent = botao.textContent;
         btnSelecionar.value = botao.textContent;
-        document.getElementById('servicos').style.display = 'none';
+        servicos.style.display = 'none';
     });
 });
 
-let servico = btnSelecionar.value;
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    
+    const nome = document.getElementById('nome').value;
+    const email = document.getElementById('email').value;
+    const telefone = document.getElementById('telefone').value;
+    const servico = btnSelecionar.value;
+    const valor = document.getElementById('valor').value;
+    const obs = document.getElementById('texto').value;
 
-btnEnviar.addEventListener('click', () => {
-    let linkWpp = 'https://wa.me//' + numeroWpp + `?text= *Nome*: ${nome.value} *Email*: ${email.value} *Telefone*: ${telefone.value} *Valor*: ${valor.value} *Serviço*: ${btnSelecionar.value} *Observações*: ${obs.value}`;
+    if (!nome || !email || !telefone || !servico || !valor) {
+        alert('Por favor, preencha todos os campos obrigatórios');
+        return;
+    }
 
+    const linkWpp = 'https://wa.me//' + numeroWpp + `?text=*Nome*: ${nome}%0A*Email*: ${email}%0A*Telefone*: ${telefone}%0A*Valor*: ${valor}%0A*Serviço*: ${servico}%0A*Observações*: ${obs}`;
     window.location.href = linkWpp;
 });
-

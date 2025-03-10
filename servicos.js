@@ -54,16 +54,16 @@ const servicos = [
         servico: 'Abertura de conta',
         texto: `Abra sua conta bancária <strong>sem custo</strong>! Com a Cred Total você tem os <strong>melhores bancos</strong> para abrir sua conta bancária digital!`
     },
-    {
-        imagem: `assets/servicos/medicina.jpg`,
-        servico: 'Tele Medicina',
-        texto: `Faça seu plano de saúde Tele Medicina e faça suas <strong>consultas no conforto da sua casa</strong>! `
-    },
-    {
-        imagem: `assets/servicos/consultoria.jpg`,
-        servico: 'Consultoria Tributária',
-        texto: `<strong>Redução de carga fiscal e conformidade legal</strong>, incluindo <strong>Recuperação Tributária</strong> para maximizar benefícios financeiros, com consultores especializados em planejamento fiscal.`
-    },
+    // {
+    //     imagem: `assets/servicos/medicina.jpg`,
+    //     servico: 'Tele Medicina',
+    //     texto: `Faça seu plano de saúde Tele Medicina e faça suas <strong>consultas no conforto da sua casa</strong>! `
+    // },
+    // {
+    //     imagem: `assets/servicos/consultoria.jpg`,
+    //     servico: 'Consultoria Tributária',
+    //     texto: `<strong>Redução de carga fiscal e conformidade legal</strong>, incluindo <strong>Recuperação Tributária</strong> para maximizar benefícios financeiros, com consultores especializados em planejamento fiscal.`
+    // },
     {
         imagem: `assets/servicos/maquina.jpg`,
         servico: ' Crédito via Maquininha',
